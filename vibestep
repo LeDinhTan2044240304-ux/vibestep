@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>VIBESTEP — Minimalist White Sneaker & Care Ecosystem</title>
+<meta name="description" content="Giày màu trắng, giày trắng đen, giày nam đẹp, giày sneaker nữ cùng bộ vệ sinh giày chuyên sâu. Đặt hàng online, giao nhanh 2h.">
+<meta name="keywords" content="giày màu trắng, giày nam, giày đẹp nam, giày trắng đen, giày sneaker nữ, giày sneaker trắng, vệ sinh giày sneaker, cách làm trắng giày">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","name":"Minimalist Low-Top White Sneaker","sku":"SNK-WHITE-LOW","description":"Giày màu trắng cổ thấp tối giản, da PU chống nhăn, phủ Nano chống thấm","offers":{"@type":"Offer","priceCurrency":"VND","price":"490000","availability":"https://schema.org/InStock"}}</script>
+<style>
+:root{--bg:#f8fafc;--surface:#ffffff;--fg:#0f172a;--mut:#64748b;--card:#ffffff;--line:#e2e8f0;--acc:#2563eb;--acc-hover:#1d4ed8;--badge-bg:#eff6ff;--badge-text:#1e40af;--ph:#f1f5f9;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#090d16;--surface:#111827;--fg:#f8fafc;--mut:#94a3b8;--card:#1e293b;--line:#334155;--acc:#3b82f6;--acc-hover:#60a5fa;--badge-bg:#1e3a8a;--badge-text:#bfdbfe;--ph:#1a2234}}
+:root[data-theme="dark"]{--bg:#090d16;--surface:#111827;--fg:#f8fafc;--mut:#94a3b8;--card:#1e293b;--line:#334155;--acc:#3b82f6;--acc-hover:#60a5fa;--badge-bg:#1e3a8a;--badge-text:#bfdbfe;--ph:#1a2234}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;transition:background 0.3s, color 0.3s}
+h1,h2,h3{line-height:1.2;margin:0 0 10px;font-weight:700}
+button,input,select,textarea{font:inherit}
+button{background:var(--acc);color:#fff;border:0;border-radius:12px;padding:10px 18px;cursor:pointer;font-weight:600;transition:all 0.2s}
+button:hover{background:var(--acc-hover);transform:translateY(-1px)}
+button.ghost{background:transparent;color:var(--fg);border:1px solid var(--line)}
+button.ghost:hover{background:var(--line)}
+input,select,textarea{padding:10px 14px;border:1px solid var(--line);border-radius:12px;background:var(--surface);color:var(--fg);max-width:100%;transition:border 0.2s}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--acc);box-shadow:0 0 0 3px rgba(37,99,235,0.15)}
+.w{max-width:1200px;margin:0 auto;padding:0 20px}
+
+/* Announcement Bar */
+.announcement{background:linear-gradient(90deg,#0f172a,#1e3a8a,#0f172a);color:#fff;font-size:13px;text-align:center;padding:8px;font-weight:500;letter-spacing:0.3px}
+.announcement span{color:#93c5fd;font-weight:700}
+
+/* Header */
+header{position:sticky;top:env(safe-area-inset-top,0px);background:var(--surface);border-bottom:1px solid var(--line);z-index:50;backdrop-filter:blur(10px);background-color:rgba(17,24,39,0.85)}
+@media(prefers-color-scheme:light){header{background-color:rgba(255,255,255,0.85)}}
+header .w{display:flex;gap:16px;align-items:center;padding-top:14px;padding-bottom:14px;flex-wrap:wrap}
+.logo{font-weight:900;font-size:24px;letter-spacing:1px;color:var(--fg);text-decoration:none}
+.logo b{color:var(--acc)}
+.search-box{flex:1;min-width:200px;position:relative}
+#q{width:100%;padding-left:38px}
+.search-icon{position:absolute;left:12px;top:50%;transform:translateY(-50%);color:var(--mut);font-size:16px}
+.nav-actions{display:flex;gap:10px;align-items:center}
+.nav-actions button{padding:8px 14px;font-size:14px}
+
+/* Hero Section */
+.hero{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:center;padding:40px 0}
+.hero-badge{display:inline-flex;align-items:center;gap:6px;padding:6px 14px;border-radius:99px;background:var(--badge-bg);color:var(--badge-text);font-size:12px;font-weight:700;margin-bottom:16px;letter-spacing:0.5px}
+.hero h1{font-size:clamp(32px,4.5vw,48px);letter-spacing:-0.5px}
+.hero h1 span{color:var(--acc)}
+.hero p{color:var(--mut);font-size:16px;margin-bottom:24px}
+.hero-btns{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:28px}
+.hero-metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;padding-top:20px;border-top:1px solid var(--line)}
+.metric-num{font-size:20px;font-weight:800;color:var(--fg)}
+.metric-lbl{font-size:12px;color:var(--mut)}
+
+.hero-img-card{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:16px;box-shadow:0 20px 25px -5px rgba(0,0,0,0.05),0 8px 10px -6px rgba(0,0,0,0.05);position:relative;overflow:hidden}
+.slot,.im{background:var(--ph);border-radius:16px;display:flex;align-items:center;justify-content:center;text-align:center;color:var(--mut);font-size:13px;overflow:hidden;position:relative}
+.slot{aspect-ratio:4/3}
+.im{aspect-ratio:1/1;margin-bottom:12px}
+.im img,.slot img{width:100%;height:100%;object-fit:cover;transition:transform 0.4s}
+.cd:hover .im img{transform:scale(1.05)}
+.floating-tag{position:absolute;bottom:24px;left:24px;background:var(--surface);border:1px solid var(--line);padding:10px 16px;border-radius:14px;box-shadow:0 10px 15px -3px rgba(0,0,0,0.1);display:flex;align-items:center;gap:10px}
+
+/* Chips Filter */
+.chips{display:flex;gap:10px;overflow-x:auto;padding:8px 0 20px;scrollbar-width:none}
+.chips::-webkit-scrollbar{display:none}
+.chips button{white-space:nowrap;background:var(--card);color:var(--fg);border:1px solid var(--line);border-radius:99px;font-size:14px;padding:8px 18px;font-weight:500}
+.chips button.on{background:var(--acc);color:#fff;border-color:var(--acc);box-shadow:0 4px 12px rgba(37,99,235,0.25)}
+
+/* Product Grid */
+#g{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:20px;margin-bottom:40px}
+.cd{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:16px;display:flex;flex-direction:column;transition:all 0.3s;box-shadow:0 4px 6px -1px rgba(0,0,0,0.02);position:relative}
+.cd:hover{transform:translateY(-4px);box-shadow:0 12px 20px -3px rgba(0,0,0,0.08);border-color:var(--acc)}
+.cd h3{font-size:16px;margin-bottom:6px}
+.ds{color:var(--mut);font-size:13px;margin:0 0 12px;flex:1;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.pr-row{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
+.pr{font-weight:800;color:var(--acc);font-size:18px}
+.ac{display:flex;gap:8px;align-items:center}
+.ac select{padding:8px 10px;font-size:13px;border-radius:10px}
+.ac button{flex:1;padding:9px 12px;font-size:13px}
+
+.cd{cursor:pointer}
+.pd-img{aspect-ratio:4/3;border-radius:16px;overflow:hidden;background:var(--ph);margin-bottom:16px}
+.pd-img img{width:100%;height:100%;object-fit:cover}
+.pd-meta{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:14px 0;font-size:13px}
+.pd-meta div{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:8px 12px}
+.pd-meta small{display:block;color:var(--mut)}
+
+
+/* Chi tiết sản phẩm (modal) */
+#mc.wide{width:min(860px,100%)}
+.pd-top{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start;margin-top:8px}
+.pd-top .pd-img{margin-bottom:0}
+.pd-cat{display:inline-block;font-size:12px;font-weight:700;color:var(--badge-text);background:var(--badge-bg);padding:3px 10px;border-radius:99px;margin-bottom:8px}
+.pd-info h2{font-size:22px;padding-right:30px}
+.pd-sec{margin-top:22px;padding-top:18px;border-top:1px solid var(--line)}
+.pd-sec h3{font-size:16px;margin-bottom:10px}
+.pd-list{margin:0;padding-left:20px;color:var(--fg);line-height:1.8}
+.pd-list.plain{list-style:none;padding-left:0;color:var(--mut)}
+.size-tbl{display:grid;grid-template-columns:repeat(9,1fr);gap:6px;margin-bottom:8px}
+.size-tbl div{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:6px 2px;text-align:center;font-size:13px}
+.size-tbl small{display:block;color:var(--mut);font-size:11px}
+.rel-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:12px}
+.rel{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:10px;cursor:pointer;transition:all .2s}
+.rel:hover{border-color:var(--acc);transform:translateY(-2px)}
+.rel-im{aspect-ratio:1/1;border-radius:10px;overflow:hidden;background:var(--ph);margin-bottom:8px}
+.rel-im img{width:100%;height:100%;object-fit:cover}
+.rel-n{font-size:12px;font-weight:600;line-height:1.3;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.rel-p{font-size:13px;font-weight:800;color:var(--acc);margin-top:4px}
+@media(max-width:640px){.pd-top{grid-template-columns:1fr}.size-tbl{grid-template-columns:repeat(5,1fr)}}
+
+/* Tips & Bento */
+.tips-title{font-size:24px;margin-top:40px;margin-bottom:16px;letter-spacing:-0.5px}
+.tips{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;margin-bottom:40px}
+.tips div{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:24px;box-shadow:0 4px 6px -1px rgba(0,0,0,0.02)}
+.tips h3{font-size:18px;margin-bottom:8px}
+.tips p{color:var(--mut);font-size:14px;margin:0 0 16px}
+.tips button{background:var(--badge-bg);color:var(--badge-text);border:none;font-size:13px;padding:8px 14px}
+.tips button:hover{background:var(--acc);color:#fff}
+
+.pop{display:flex;flex-wrap:wrap;gap:10px;margin:12px 0 30px}
+.pop button{background:var(--card);color:var(--mut);border:1px solid var(--line);border-radius:99px;font-size:13px;padding:6px 14px;font-weight:500;transition:all 0.2s}
+.pop button:hover{color:var(--fg);border-color:var(--acc)}
+
+/* Footer */
+footer{background:var(--surface);border-top:1px solid var(--line);padding:30px 0 40px;color:var(--mut);font-size:14px}
+
+/* Modal & Toast */
+#m{position:fixed;inset:0;background:rgba(0,0,0,0.6);backdrop-filter:blur(4px);display:none;align-items:center;justify-content:center;z-index:100;padding:20px}
+#m.on{display:flex}
+#mc{background:var(--surface);color:var(--fg);border-radius:24px;padding:28px;width:min(550px,100%);max-height:90vh;overflow:auto;position:relative;box-shadow:0 25px 50px -12px rgba(0,0,0,0.25);border:1px solid var(--line)}
+#mc form{display:grid;gap:12px;margin:12px 0}
+.x{position:absolute;right:16px;top:16px;background:var(--card);border:1px solid var(--line);color:var(--fg);width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px;padding:0;cursor:pointer}
+.x:hover{background:var(--line)}
+.rw{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid var(--line)}
+.rw button{padding:4px 10px;font-size:12px}
+.xs{display:grid;gap:8px;margin-bottom:16px}
+.sm{background:var(--card);color:var(--fg);border:1px dashed var(--acc);text-align:left;font-size:13px;padding:10px;border-radius:12px;cursor:pointer}
+.sm:hover{background:var(--badge-bg)}
+.er{color:#ef4444;font-size:13px;font-weight:500}
+
+#t{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--fg);color:var(--bg);padding:10px 20px;border-radius:99px;display:none;z-index:200;font-weight:600;box-shadow:0 10px 15px -3px rgba(0,0,0,0.2)}
+a{color:var(--acc);text-decoration:none}
+a:hover{text-decoration:underline}
+@media(max-width:768px){.hero{grid-template-columns:1fr;gap:24px;padding:20px 0}}
+</style>
+</head>
+<body>
+
+<div class="announcement">
+  🔥 Combo Quà Tặng 20/10 & Phụ Kiện: Miễn phí vận chuyển đơn từ 299k | Mã: <span>VIBESTEP</span>
+</div>
+
+<header>
+  <div class="w">
+    <a href="#" class="logo" data-a="f" data-k="all">VIBESTEP<b>.</b></a>
+    <div class="search-box">
+      <span class="search-icon">🔍</span>
+      <input id="q" list="kw" placeholder="Tìm kiếm: giày màu trắng, xịt nano, combo 20/10..." aria-label="Tìm kiếm">
+      <datalist id="kw"></datalist>
+    </div>
+    <div class="nav-actions">
+      <button class="ghost" id="ub" data-a="user">Đăng nhập</button>
+      <button id="cb" data-a="cart">Giỏ (0)</button>
+    </div>
+  </div>
+</header>
+
+<main class="w">
+<section class="hero">
+  <div>
+    <span class="hero-badge">✨ NEW COLLECTION 2026 • NANO TECH LEATHER</span>
+    <h1>BƯỚC CHÂN TỐI GIẢN,<br><span>NÂNG TẦM PHONG CÁCH.</span></h1>
+    <p>Dòng Minimalist White Sneaker thế hệ mới tích hợp công nghệ chống bám bẩn Nano vượt trội. Đi êm chân, bền dáng, dễ phối mọi outfit.</p>
+    <div class="hero-btns">
+      <button data-a="f" data-k="w">🛒 Xem Giày Màu Trắng</button>
+      <button class="ghost" data-a="f" data-k="gift">🎁 Khám Phá Combo Quà Tặng</button>
+    </div>
+    <div class="hero-metrics">
+      <div>
+        <div class="metric-num">4.9/5 ⭐</div>
+        <div class="metric-lbl">1.200+ Đánh giá</div>
+      </div>
+      <div>
+        <div class="metric-num">100%</div>
+        <div class="metric-lbl">Da thật cao cấp</div>
+      </div>
+      <div>
+        <div class="metric-num">Hỏa tốc</div>
+        <div class="metric-lbl">Giao hàng 2 giờ</div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-img-card">
+    <div class="slot" id="hero"></div>
+    <div class="floating-tag">
+      <span style="font-size:24px">✨</span>
+      <div>
+        <div style="font-size:12px; color:var(--mut); font-weight:600">Hot Cross-Sell Deal</div>
+        <div style="font-size:14px; font-weight:800">Giày + Xịt Nano (-15%)</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="chips" id="chips"></div>
+<div id="g"></div>
+
+<h2 class="tips-title">💡 Mẹo Chăm Sóc & Bảo Quản Sneaker</h2>
+<div class="tips">
+  <div>
+    <h3>Cách làm trắng giày đơn giản</h3>
+    <p>Sử dụng bọt vệ sinh khô chuyên dụng, chờ 30 giây rồi chải nhẹ nhàng bằng bàn chải lông mềm. Phơi nơi thoáng mát.</p>
+    <button data-a="f" data-k="care">Xem Bộ Vệ Sinh Giày →</button>
+  </div>
+  <div>
+    <h3>Bí quyết chống thấm nước Nano</h3>
+    <p>Xịt đều lớp Nano cách bề mặt 20cm trước khi ra ngoài giúp kháng nước tuyệt đối, giữ giày luôn trắng sáng như mới.</p>
+    <button data-a="f" data-k="care">Xem Xịt Nano & Phụ Kiện →</button>
+  </div>
+  <div>
+    <h3>Cách buộc dây sneaker cá tính</h3>
+    <p>Lựa chọn dây dẹt hoặc dây phản quang thắt kiểu song song tối giản giúp đôi giày nổi bật và thời trang hơn.</p>
+    <button data-a="f" data-k="care">Xem Phụ Kiện Dây Giày →</button>
+  </div>
+</div>
+
+<h2 style="font-size:20px; margin-top:30px">🔍 Từ khóa tìm kiếm phổ biến</h2>
+<div class="pop" id="pop"></div>
+</main>
+
+<footer>
+  <div class="w" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px">
+    <div>
+      <strong>VIBESTEP® E-COMMERCE ECOSYSTEM</strong><br>
+      Hotline: 0988 xxx xxx · Email: support@vibestep.vn<br>
+      Địa chỉ: 140 Lê Trọng Tấn, Tây Thạnh, Tân Phú, TP.HCM
+    </div>
+    <div style="text-align:right">
+      <small>© 2026 VibeStep Inc. All rights reserved.<br>Thanh toán khi nhận hàng (COD) & QR Ngân hàng.</small>
+    </div>
+  </div>
+</footer>
+
+<div id="m"><div id="mc"></div></div>
+<div id="t"></div>
+
+<script>
+const $=s=>document.querySelector(s);
+const LS={g(k,d){try{const v=JSON.parse(localStorage.getItem(k));return v==null?d:v}catch(e){return d}},s(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
+const fm=n=>n.toLocaleString('vi-VN')+'đ';
+
+const HERO_IMG="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?q=80&w=1200&auto=format&fit=crop";
+const IMG={};
+// Giày Minimalist White Sneaker & Sneaker chủ đạo
+IMG[1]="https://i.pinimg.com/736x/74/30/b7/7430b7a3a04a23101eb6d88c168d34fa.jpg"; // Minimalist Low-Top White Sneaker
+IMG[2]="https://i.pinimg.com/736x/09/34/74/093474d064e4c1be12ec508b101e40f2.jpg"; // Retro Chunky Dad Shoes
+IMG[3]="https://i.pinimg.com/736x/ea/0b/c4/ea0bc42fc4078e35a1a2f8cc95be8334.jpg"; // Vintage High-Top Canvas
+IMG[4]="https://i.pinimg.com/736x/7c/ad/39/7cad394831851699d04afa2e6857b552.jpg"; // Slip-On Casual
+IMG[5]="https://i.pinimg.com/736x/7d/b6/1f/7db61f1f12489f59a321c47dc37f79eb.jpg"; // Mesh Running
+IMG[6]="https://i.pinimg.com/736x/ff/8d/19/ff8d19c1075ef660eda68eda31ff4cb1.jpg"; // Mid-Top Urban Street
+IMG[7]="https://i.pinimg.com/736x/a1/08/ac/a108ac774e9889461b82a498519cef99.jpg"; // All-Black Leather
+IMG[8]="https://i.pinimg.com/736x/53/90/78/539078f0cc42560a0cd6cb7f93e8a9d6.jpg"; // Skateboarding Suede
+IMG[9]="https://i.pinimg.com/736x/6c/bc/0a/6cbc0ace88c4c01327e3996de00b79df.jpg"; // Loafer Leather Sneaker
+
+// Hệ sinh thái Phụ kiện & Vệ sinh giày (Care & Accessories)
+IMG[10]="https://i.pinimg.com/736x/7d/5f/0a/7d5f0ab04fabaf52788ad81e8205dc28.jpg"; // Chai xịt Nano chống thấm
+IMG[11]="https://i.pinimg.com/736x/b9/22/3b/b9223bdf7dba7cf2a4dce7e4e6b1e9df.jpg"; // Bọt vệ sinh khô
+IMG[12]="https://i.pinimg.com/736x/51/ef/8f/51ef8f2ea9b27c074ee53061409d528e.jpg"; // Bàn chải lông mềm
+IMG[13]="https://i.pinimg.com/736x/37/4b/8c/374b8c3ea34602181d34c3a144f73bac.jpg"; // Cây giữ phom giày
+IMG[14]="https://i.pinimg.com/736x/da/0a/67/da0a676ed6fd1b5e527c8e4bb1d517fb.jpg"; // Lót giày EVA
+IMG[15]="https://i.pinimg.com/736x/92/eb/13/92eb13a5dd19d9d9de87c2df32997125.jpg"; // Vớ Streetwear
+IMG[16]="https://i.pinimg.com/736x/73/dd/dd/73ddddd3add4fe7cc19282e996f50963.jpg"; // Dây giày phản quang
+IMG[17]="https://i.pinimg.com/736x/cc/63/3d/cc633d7d391140277c90f3985999facd.jpg"; // Charm trang trí
+IMG[18]="https://i.pinimg.com/736x/4d/79/b7/4d79b7dc3c54abccd4b9a4a005a458de.jpg"; // Hộp đựng giày Acrylic
+
+// Combo Quà Tặng & Dịch vụ
+IMG[19]="https://i.pinimg.com/736x/29/1c/64/291c64ae3c347a0b728c23b8fb8e68c6.jpg"; // Combo Gift Set 20/10
+IMG[20]="https://i.pinimg.com/736x/56/23/92/562392737bfa24abc37deffe966cd2f0.jpg"; // Voucher Spa giày
+IMG[21]="https://i.pinimg.com/736x/8c/e7/16/8ce7160aef15bbf85016e041e2a54693.jpg"; // Combo Cơ bản
+IMG[22]="https://i.pinimg.com/736x/32/20/85/322085e91fe7c9cec235c7084ee54789.jpg"; // Combo Chuyên sâu
+IMG[23]="https://i.pinimg.com/736x/ac/ed/52/aced5299560bcba975d8961b3e778934.jpg"; // Combo Phụ kiện Streetwear
+// Khởi tạo danh sách sản phẩm kèm theo tồn kho (stock) và cấu hình sản phẩm bán kèm (cross-sell bundle)
+const DEFAULT_PRODUCTS=[
+[1,'SNK-WHITE-LOW','Minimalist Low-Top White Sneaker',490000,'shoe','w m f','Giày màu trắng cổ thấp, da PU chống nhăn – "cân mọi outfit".', 5],
+[2,'SNK-CHUNKY-OG','Retro Chunky "Dad Shoes"',550000,'shoe','m f','Dáng hầm hố thập niên 90, da lộn phối lưới thoáng khí.', 1], // Tồn kho thấp < 2 để test cảnh báo
+[3,'SNK-CANVAS-HI','Vintage High-Top Canvas',390000,'shoe','m f cheap','Cổ cao vải canvas bền, hợp cả nam và nữ.', 10],
+[4,'SNK-SLIPON-BLK','Slip-On Casual Canvas',350000,'shoe','m f cheap b','Giày lười không dây, xỏ tiện lợi, thoáng khí.', 8],
+[5,'SNK-RUN-MESH','Performance Mesh Running',480000,'shoe','m f','Giày chạy bộ vải Mesh, đế EVA êm.', 6],
+[6,'SNK-MID-URBAN','Mid-Top Urban Street',580000,'shoe','m','Cổ vừa, da tổng hợp phối màu tương phản.', 4],
+[7,'SNK-BLK-LOW','Minimalist All-Black Leather',495000,'shoe','b m f','Giày đen nguyên khối, da vi sợi chống bám bẩn.', 3],
+[8,'SNK-SKATE-SDE','Skateboarding Suede Low',520000,'shoe','m','Da lộn cao cấp, đế cao su siêu bám.', 7],
+[9,'SNK-LOAF-LEA','Slip-On Loafer Leather Sneaker',620000,'shoe','m','Loafer lịch lãm, đế sneaker, da thật mềm.', 2],
+[10,'KIT-NANO-150M','Chai xịt Nano chống thấm (150ml)',85000,'care','','Tạo lớp màng chống bám bẩn và nước.', 15],
+[11,'KIT-FOAM-200M','Chai bọt vệ sinh khô (200ml)',75000,'care','','Làm sạch nhanh không cần nước.', 12],
+[12,'KIT-BRUSH-WOOD','Bàn chải lông mềm đánh giày',30000,'care','','Cán gỗ, lông mềm không trầy da.', 20],
+[13,'KIT-TREE-PLAS','Cây giữ phom giày cao cấp',45000,'care','','Giữ dáng giày, hạn chế nếp nhăn.', 14],
+[14,'KIT-INSOLE-EVA','Lót giày mút xốp EVA êm chân',40000,'care','','Phân bổ áp lực, êm khi đi lâu.', 18],
+[15,'ACC-SOCK-WHITE','Vớ cổ cao Streetwear Cotton',25000,'acc','','Cotton co giãn 4 chiều, thấm hút tốt.', 30],
+[16,'ACC-LACE-REF','Dây giày dẹt phản quang (120cm)',20000,'acc','','Sợi phản quang nổi bật trong đêm.', 25],
+[17,'ACC-CHARM-MET','Charm trang trí dây giày Metal',25000,'acc','','Hợp kim không gỉ, cá nhân hóa sneaker.', 19],
+[18,'ACC-BOX-ACRY','Hộp đựng giày Acrylic trong suốt',80000,'acc','','Chống bụi, xếp chồng làm tủ giày decor.', 6],
+[19,'SET-GIFT-HERO','Combo Gift Set Care & Sneaker',680000,'gift','w','Giày trắng + bộ vệ sinh trong hộp quà nắp nam châm.', 4],
+[20,'SER-SPA-CLEAN','Voucher Spa & Vệ sinh giày',99000,'svc','','Giặt hấp, spa sneaker tại cửa hàng.', 50],
+[21,'SET-CARE-BASIC','Combo Chăm Sóc Giày Cơ Bản',150000,'gift','','Xịt Nano + Bọt vệ sinh + Bàn chải.', 9],
+[22,'SET-CARE-PRO','Combo Chăm Sóc & Bảo Quản Chuyên Sâu',230000,'gift','','Cơ bản + Cây giữ phom + Lót EVA.', 5],
+[23,'SET-STREET-STYLE','Combo Phụ Kiện Streetwear',79000,'gift','','2 vớ cotton + dây phản quang + charm.', 11]
+];
+
+let P = LS.g('vibestep_products', DEFAULT_PRODUCTS).map(a=>({id:a[0],sku:a[1],n:a[2],pr:a[3],c:a[4],t:a[5]+' '+a[4],d:a[6], stock: a[7] !== undefined ? a[7] : 10}));
+
+// Khởi tạo bài viết hệ thống cho Seller Flow
+let BLOGS = LS.g('vibestep_blogs', [
+  {id:1, title: 'Bí quyết giữ giày sneaker trắng luôn sạch như mới', date: '2026-03-01', content: 'Hướng dẫn chi tiết cách dùng bọt vệ sinh khô và xịt nano chống thấm hiệu quả.'},
+  {id:2, title: 'Top 5 xu hướng phối đồ với Minimalist Sneaker năm 2026', date: '2026-03-05', content: 'Gợi ý phối đồ streetwear năng động, lịch lãm cho cả nam và nữ.'}
+]);
+
+const F={all:()=>1,w:p=>/\bw\b/.test(p.t),bw:p=>/\b[wb]\b/.test(p.t),m:p=>/\bm\b/.test(p.t),f:p=>/\bf\b/.test(p.t),cheap:p=>/cheap/.test(p.t),care:p=>/care|acc|svc/.test(p.t),gift:p=>p.c=='gift'};
+const CH=[['all','Tất cả sản phẩm'],['w','Giày màu trắng'],['bw','Giày trắng đen'],['m','Giày nam'],['cheap','Giày giá rẻ'],['care','Vệ sinh & phụ kiện'],['gift','Combo Quà Tặng 20/10']];
+const POP=['giày màu trắng','giày nam','giày đẹp nam','giày trắng đen','giày trắng nam','giày sneaker nữ','giày sneaker trắng','vệ sinh giày sneaker','cách làm trắng giày','combo quà tặng','xịt nano'];
+const SY=[['trắng','w'],['đen','b'],['nam','m'],['nữ','f'],['rẻ','cheap'],['vệ sinh','care'],['làm trắng','care'],['buộc','care'],['giặt','care'],['tủ giày','acc'],['quà','gift']];
+
+let cur='all',cart=LS.g('giay_cart',[]),user=LS.g('giay_sess',null);
+const USERS=()=>[{e:'khach@giay.vn',p:'123456',n:'Khách demo',r:'user'},{e:'admin@giay.vn',p:'admin123',n:'Quản trị viên',r:'admin'}].concat(LS.g('giay_users',[]));
+
+const toast=m=>{const t=$('#t');t.textContent=m;t.style.display='block';clearTimeout(t.h);t.h=setTimeout(()=>t.style.display='none',2200)};
+const openM=h=>{$('#mc').classList.remove('wide');$('#mc').innerHTML='<button class="x" data-a="close" aria-label="Đóng">×</button>'+h;$('#m').classList.add('on')};
+const closeM=()=>$('#m').classList.remove('on');
+
+const ph=p=>`<span>${p.sku}<br>VibeStep Studio</span>`;
+const hasSize=p=>p.c=='shoe'||p.id==19;
+
+const card=p=>{
+  const lowStockBadge = p.stock <= 2 ? `<span style="position:absolute; top:12px; right:12px; background:#ef4444; color:#fff; font-size:11px; font-weight:700; padding:2px 8px; border-radius:6px">⚠️ Sắp hết (${p.stock})</span>` : '';
+ return `<article class="cd" style="position:relative" data-a="detail" data-id="${p.id}">
+${lowStockBadge}
+<div class="im">${IMG[p.id]?`<img src="${IMG[p.id]}" alt="${p.n}" loading="lazy">`:ph(p)}</div>
+<h3>${p.n}</h3>
+<p class="ds">${p.d}</p>
+<div class="pr-row">
+  <div class="pr">${fm(p.pr)}</div>
+  <span style="font-size:11px; font-weight:700; color:var(--mut); background:var(--badge-bg); padding:2px 8px; border-radius:6px">SKU: ${p.sku}</span>
+</div>
+<div class="ac">
+  ${hasSize(p)?`<select id="s${p.id}" aria-label="Size">${[36,37,38,39,40,41,42,43,44].map(s=>`<option ${s==41?'selected':''}>Size ${s}</option>`).join('')}</select>`:''}
+  <button data-a="add" data-id="${p.id}">Thêm vào giỏ</button>
+</div>
+</article>`;
+};
+const CAT_NAME={shoe:'Giày sneaker',care:'Vệ sinh giày',acc:'Phụ kiện',gift:'Combo quà tặng',svc:'Dịch vụ'};
+
+/* ===== THÔNG TIN CHI TIẾT SẢN PHẨM (hiện khi bấm vào thẻ sản phẩm) =====
+   l = mô tả chi tiết | h = điểm nổi bật | s = thông số [nhãn, giá trị]
+   u = hướng dẫn sử dụng / bảo quản | inc = sản phẩm trong combo (id hoặc chữ)
+   Muốn sửa nội dung: chỉ cần sửa trong bảng DETAILS này. */
+const DETAILS={
+1:{l:'Đôi sneaker trắng cổ thấp tối giản, phom gọn, dễ phối từ quần jeans, short đến chân váy. Da PU chống nhăn phủ lớp Nano giúp hạn chế bám bẩn, lau sạch nhanh sau mỗi lần đi.',h:['Da PU chống nhăn, giữ form sau nhiều lần mang','Phủ Nano chống thấm nước & bám bẩn','Đế cao su êm, bám tốt khi di chuyển','Thiết kế unisex, phối được mọi outfit'],s:[['Chất liệu','Da PU phủ Nano'],['Màu sắc','Trắng'],['Kiểu dáng','Cổ thấp (Low-top)'],['Đế giày','Cao su'],['Phù hợp','Nam & Nữ']],u:'Dùng bọt vệ sinh khô và bàn chải lông mềm để làm sạch; xịt Nano định kỳ để duy trì khả năng chống bẩn.'},
+2:{l:'Phong cách "Dad Shoes" thập niên 90 với dáng hầm hố, đế dày nổi bật. Phần thân da lộn phối lưới giúp thoáng khí, tạo điểm nhấn cá tính cho trang phục streetwear.',h:['Dáng chunky đế dày, tôn chiều cao nhẹ','Da lộn phối lưới thoáng khí','Phù hợp phong cách streetwear, đường phố','Số lượng có hạn'],s:[['Chất liệu','Da lộn phối lưới'],['Kiểu dáng','Chunky / Dad shoes'],['Đế giày','Cao su đế dày'],['Phù hợp','Nam & Nữ']],u:'Da lộn không nên ngâm nước; dùng bàn chải lông mềm chải theo một chiều để làm sạch.'},
+3:{l:'Mẫu cổ cao vải canvas kinh điển, bền bỉ và có mức giá dễ tiếp cận. Form giày ôm chân, hợp cả nam lẫn nữ và dễ phối với quần ống rộng hoặc jeans.',h:['Vải canvas dày dặn, bền theo thời gian','Cổ cao ôm cổ chân, tạo phong cách retro','Giá hợp lý cho học sinh – sinh viên','Dễ giặt, nhanh khô'],s:[['Chất liệu','Vải canvas'],['Kiểu dáng','Cổ cao (High-top)'],['Đế giày','Cao su lưu hóa'],['Phù hợp','Nam & Nữ']],u:'Có thể giặt tay nhẹ với xà phòng loãng, phơi nơi thoáng mát, tránh phơi trực tiếp dưới nắng gắt.'},
+4:{l:'Giày lười không dây xỏ nhanh, tiện lợi cho đi học, đi làm hay dạo phố. Chất liệu canvas thoáng khí, mang cả ngày vẫn nhẹ chân.',h:['Thiết kế slip-on, xỏ vào là đi','Vải canvas thoáng khí','Nhẹ, mềm, dễ vận động','Màu đen dễ phối, ít lộ vết bẩn'],s:[['Chất liệu','Vải canvas'],['Màu sắc','Đen'],['Kiểu dáng','Slip-on không dây'],['Phù hợp','Nam & Nữ']],u:'Vệ sinh bằng bàn chải mềm, hạn chế gấp gót giày để giữ form.'},
+5:{l:'Đôi giày chạy bộ dùng vải Mesh thoáng khí kết hợp đế EVA êm ái, giảm chấn tốt cho các buổi chạy nhẹ, đi bộ hoặc tập gym hằng ngày.',h:['Thân Mesh thoáng, nhanh khô','Đế EVA nhẹ, êm, giảm chấn','Ôm chân, linh hoạt khi vận động','Phù hợp chạy bộ, gym, đi bộ'],s:[['Chất liệu','Vải Mesh'],['Đế giày','EVA giảm chấn'],['Kiểu dáng','Running'],['Phù hợp','Nam & Nữ']],u:'Không giặt máy; lau bằng khăn ẩm và để khô tự nhiên sau khi chạy.'},
+6:{l:'Giày cổ vừa phối màu tương phản, mang đậm chất urban. Da tổng hợp bền, dễ lau chùi, giữ dáng tốt trong quá trình sử dụng.',h:['Cổ vừa ôm cổ chân, năng động','Phối màu tương phản nổi bật','Da tổng hợp bền, dễ vệ sinh','Hợp phong cách đường phố'],s:[['Chất liệu','Da tổng hợp'],['Kiểu dáng','Cổ vừa (Mid-top)'],['Đế giày','Cao su'],['Phù hợp','Nam']],u:'Lau bằng khăn ẩm, tránh để giày ở nơi quá nóng làm bong keo.'},
+7:{l:'Phiên bản đen nguyên khối tối giản và lịch sự. Da vi sợi có khả năng chống bám bẩn, phù hợp cả đi làm lẫn đi chơi.',h:['Đen toàn thân, sang và dễ phối','Da vi sợi chống bám bẩn','Phom thấp gọn gàng','Dùng được cả đi làm và đi chơi'],s:[['Chất liệu','Da vi sợi'],['Màu sắc','Đen'],['Kiểu dáng','Cổ thấp (Low-top)'],['Phù hợp','Nam & Nữ']],u:'Lau nhẹ bằng khăn ẩm, có thể dùng xịt Nano để tăng khả năng chống nước.'},
+8:{l:'Mẫu giày skate cổ thấp với da lộn cao cấp và đế cao su bám sàn tốt, thiết kế bền bỉ cho cả vận động lẫn phối đồ hằng ngày.',h:['Da lộn cao cấp, mềm và có chiều sâu màu','Đế cao su bám tốt, hợp trượt ván','Phần mũi gia cố bền bỉ','Phong cách skater trẻ trung'],s:[['Chất liệu','Da lộn (Suede)'],['Kiểu dáng','Skate cổ thấp'],['Đế giày','Cao su bám cao'],['Phù hợp','Nam']],u:'Tránh để giày dính nước; dùng bàn chải lông mềm chải theo một chiều để làm sạch.'},
+9:{l:'Kết hợp dáng loafer lịch lãm với đế sneaker êm chân. Da thật mềm, mang vừa thoải mái vừa đủ chỉn chu cho môi trường công sở.',h:['Dáng loafer lịch sự, không dây','Da thật mềm, ôm chân','Đế sneaker êm, đi lâu không mỏi','Số lượng có hạn'],s:[['Chất liệu','Da thật'],['Kiểu dáng','Loafer sneaker'],['Đế giày','Cao su êm'],['Phù hợp','Nam']],u:'Dùng xi đánh giày hoặc khăn mềm lau định kỳ để giữ độ bóng và độ mềm của da.'},
+10:{l:'Chai xịt tạo lớp màng bảo vệ vô hình trên bề mặt giày, giúp nước và bụi bẩn khó bám lại. Dùng được cho da, canvas và vải.',h:['Tạo lớp màng chống nước, chống bám bẩn','Dùng cho nhiều chất liệu giày','Chai 150ml, xịt được nhiều lần','Không để lại vết trên bề mặt giày'],s:[['Dung tích','150ml'],['Loại','Xịt Nano chống thấm'],['Dùng cho','Da, canvas, vải']],u:'Xịt đều cách bề mặt khoảng 20cm lên giày khô và sạch, để khô tự nhiên rồi mới mang. Nên xịt định kỳ hoặc trước khi ra ngoài trời mưa.'},
+11:{l:'Bọt vệ sinh dạng khô làm sạch nhanh vết bẩn trên giày mà không cần xả nước, tiện khi cần xử lý nhanh tại nhà hoặc văn phòng.',h:['Làm sạch không cần nước','Bọt mịn, dễ thao tác','Phù hợp giày da, canvas, vải','Chai 200ml dùng được lâu'],s:[['Dung tích','200ml'],['Loại','Bọt vệ sinh khô'],['Dùng cho','Da, canvas, vải']],u:'Lắc đều, bơm bọt lên bề mặt giày, chờ khoảng 30 giây rồi chải nhẹ bằng bàn chải mềm và lau lại bằng khăn sạch.'},
+12:{l:'Bàn chải cán gỗ với lông mềm, vệ sinh giày hiệu quả mà không làm trầy xước bề mặt da hay vải.',h:['Cán gỗ cầm chắc tay','Lông mềm không gây trầy da','Phối hợp tốt với bọt vệ sinh khô','Nhỏ gọn, dễ cất giữ'],s:[['Chất liệu','Cán gỗ, lông mềm'],['Dùng cho','Da, canvas, vải, da lộn']],u:'Rửa sạch và để khô sau khi dùng để lông bàn chải bền hơn.'},
+13:{l:'Cây giữ phom nhồi vào giày khi không sử dụng, giúp giày không bị móp mũi, hạn chế nếp nhăn và giữ dáng lâu dài.',h:['Giữ dáng giày, hạn chế nếp gấp','Phù hợp nhiều size giày','Nhẹ, dễ sử dụng','Kéo dài tuổi thọ giày'],s:[['Chất liệu','Nhựa'],['Công dụng','Giữ form, chống nhăn mũi giày']],u:'Đặt cây giữ phom vào giày sau khi giày đã khô, bảo quản nơi thoáng mát.'},
+14:{l:'Miếng lót giày bằng mút EVA giúp phân bổ lực đều lên bàn chân, mang lại cảm giác êm hơn khi đi hoặc đứng lâu.',h:['Mút EVA mềm, êm chân','Phân bổ áp lực bàn chân','Có thể cắt vừa size giày','Dễ thay thế'],s:[['Chất liệu','Mút xốp EVA'],['Công dụng','Tăng độ êm, giảm mỏi chân']],u:'Cắt theo form lót cũ của giày rồi đặt vào; thay mới khi lót bị xẹp.'},
+15:{l:'Vớ cổ cao cotton co giãn 4 chiều, thấm hút mồ hôi tốt, hợp mang cùng sneaker để tạo phong cách streetwear.',h:['Cotton co giãn 4 chiều','Thấm hút mồ hôi, thoáng chân','Cổ cao phong cách streetwear','Mềm, không bí chân'],s:[['Chất liệu','Cotton co giãn'],['Kiểu dáng','Cổ cao'],['Phù hợp','Nam & Nữ']],u:'Giặt với nước mát, không dùng chất tẩy mạnh.'},
+16:{l:'Dây giày dẹt có sợi phản quang, nổi bật khi gặp ánh sáng đèn vào buổi tối, vừa tạo điểm nhấn thời trang vừa hỗ trợ an toàn.',h:['Sợi phản quang nổi bật ban đêm','Dây dẹt, dễ thắt kiểu tối giản','Dài 120cm, hợp đa số mẫu giày','Dễ thay thế'],s:[['Chiều dài','120cm'],['Kiểu dây','Dẹt, phản quang']],u:'Luồn dây theo kiểu song song để có vẻ ngoài gọn gàng và nổi bật.'},
+17:{l:'Charm kim loại nhỏ gắn lên dây giày giúp cá nhân hóa đôi sneaker của bạn chỉ trong vài giây.',h:['Hợp kim không gỉ','Gắn/tháo dễ dàng','Cá nhân hóa sneaker','Nhỏ gọn, nhẹ'],s:[['Chất liệu','Hợp kim'],['Công dụng','Trang trí dây giày']],u:'Lau khô khi bị ướt để giữ độ bóng của charm.'},
+18:{l:'Hộp đựng giày bằng acrylic trong suốt, chống bụi và có thể xếp chồng để làm tủ giày trưng bày ngay trong phòng.',h:['Acrylic trong suốt, dễ ngắm giày','Chống bụi, bảo vệ giày','Xếp chồng tiết kiệm không gian','Vừa làm vật decor'],s:[['Chất liệu','Acrylic trong suốt'],['Công dụng','Bảo quản, trưng bày giày']],u:'Lau bằng khăn mềm ẩm, tránh dùng chất tẩy có cồn mạnh.'},
+19:{l:'Combo quà tặng gồm một đôi sneaker trắng cùng bộ vệ sinh giày, đóng trong hộp quà nắp nam châm sang trọng. Phù hợp làm quà dịp 20/10.',h:['Quà tặng trọn bộ, sẵn sàng để tặng','Hộp nắp nam châm cao cấp','Tiết kiệm hơn mua lẻ','Phù hợp tặng nam & nữ'],s:[['Loại','Combo quà tặng'],['Đóng gói','Hộp quà nắp nam châm']],inc:[1,'Bộ vệ sinh giày đi kèm'],u:'Chọn size giày khi đặt hàng; có thể ghi chú lời nhắn tặng.'},
+20:{l:'Dịch vụ giặt hấp và spa sneaker tại cửa hàng, giúp đôi giày trở lại độ sạch sẽ và tươi mới như ban đầu.',h:['Giặt hấp chuyên nghiệp','Xử lý vết bẩn cứng đầu','Thực hiện trực tiếp tại cửa hàng','Phù hợp nhiều loại giày'],s:[['Loại','Voucher dịch vụ'],['Địa điểm','Tại cửa hàng VibeStep']],u:'Mang giày và voucher đến cửa hàng để được phục vụ.'},
+21:{l:'Bộ ba cơ bản giúp bạn vệ sinh và bảo vệ giày tại nhà: xịt Nano chống thấm, bọt vệ sinh khô và bàn chải lông mềm.',h:['Đủ bộ để vệ sinh hằng ngày','Tiết kiệm hơn mua lẻ','Phù hợp người mới bắt đầu chăm sóc giày'],s:[['Loại','Combo chăm sóc'],['Số món','3 sản phẩm']],inc:[10,11,12],u:'Dùng bọt vệ sinh làm sạch, lau khô, sau đó xịt Nano để bảo vệ giày.'},
+22:{l:'Combo đầy đủ để vệ sinh và bảo quản giày lâu dài: gồm bộ cơ bản cùng cây giữ phom và lót giày EVA.',h:['Vệ sinh & bảo quản trong một bộ','Giữ phom, tăng độ êm cho giày','Tiết kiệm hơn mua lẻ'],s:[['Loại','Combo chuyên sâu'],['Số món','5 sản phẩm']],inc:[10,11,12,13,14],u:'Vệ sinh giày sạch và khô, sau đó đặt cây giữ phom khi cất giày.'},
+23:{l:'Combo phụ kiện giúp làm mới đôi sneaker và outfit streetwear của bạn với vớ, dây giày phản quang và charm.',h:['Làm mới giày với chi phí thấp','Phù hợp tặng bạn bè','Phong cách streetwear'],s:[['Loại','Combo phụ kiện'],['Số món','4 sản phẩm']],inc:['2 đôi vớ cotton cổ cao','1 dây giày phản quang','1 charm trang trí'],u:'Thay dây giày và gắn charm để tạo phong cách riêng cho đôi giày.'}
+};
+const SIZE_CM=[[36,'22.5'],[37,'23.0'],[38,'23.5'],[39,'24.5'],[40,'25.0'],[41,'25.5'],[42,'26.5'],[43,'27.0'],[44,'27.5']];
+const POLICY=['🚚 Giao hỏa tốc 2 giờ nội thành TP.HCM (tùy khu vực)','🎁 Miễn phí vận chuyển cho đơn từ 299.000đ — mã VIBESTEP','💳 Thanh toán COD hoặc quét QR chuyển khoản','🔄 Hỗ trợ đổi size nếu giày chưa qua sử dụng (liên hệ hotline để được hướng dẫn)'];
+
+function relatedOf(p){
+  let ids=[];
+  if(p.c=='shoe') ids=[10,11,16].concat(P.filter(x=>x.c=='shoe'&&x.id!=p.id).slice(0,3).map(x=>x.id));
+  else if(p.c=='care') ids=[21,22].concat(P.filter(x=>x.c=='shoe').slice(0,2).map(x=>x.id));
+  else if(p.c=='acc') ids=[1,7,10].concat(P.filter(x=>x.c=='acc'&&x.id!=p.id).slice(0,2).map(x=>x.id));
+  else ids=[1,10,11,21];
+  return [...new Set(ids)].filter(i=>i!=p.id).map(i=>P.find(x=>x.id==i)).filter(Boolean).slice(0,4);
+}
+
+function productM(id){
+  const p=P.find(x=>x.id==id); if(!p) return;
+  const D=DETAILS[p.id]||{l:p.d,h:[],s:[]};
+  const stock = p.stock<=0 ? '<span style="color:#ef4444">Tạm hết hàng</span>'
+              : p.stock<=2 ? `<span style="color:#ef4444">Sắp hết (còn ${p.stock})</span>`
+              : `<span style="color:#16a34a">Còn hàng (${p.stock})</span>`;
+  const specs=[['Mã SKU',p.sku],['Danh mục',CAT_NAME[p.c]||'']].concat(D.s||[]);
+  const inc=(D.inc||[]).map(x=>{
+    if(typeof x=='number'){const q=P.find(i=>i.id==x);return q?`<li><a href="#" data-a="detail" data-id="${q.id}">${q.n}</a> <small style="color:var(--mut)">(${fm(q.pr)})</small></li>`:''}
+    return `<li>${x}</li>`;
+  }).join('');
+  const rel=relatedOf(p).map(q=>`<div class="rel" data-a="detail" data-id="${q.id}">
+      <div class="rel-im">${IMG[q.id]?`<img src="${IMG[q.id]}" alt="${q.n}" loading="lazy">`:ph(q)}</div>
+      <div class="rel-n">${q.n}</div><div class="rel-p">${fm(q.pr)}</div></div>`).join('');
+  const sizeGuide=hasSize(p)?`<div class="pd-sec"><h3>📏 Bảng quy đổi size (tham khảo)</h3>
+      <div class="size-tbl">${SIZE_CM.map(([s,c])=>`<div><b>${s}</b><small>${c}cm</small></div>`).join('')}</div>
+      <small style="color:var(--mut)">Đo chiều dài bàn chân rồi chọn size gần nhất; nếu chân bè nên chọn lớn hơn 1 size.</small></div>`:'';
+
+  openM(`
+    <div class="pd-top">
+      <div class="pd-img">${IMG[p.id]?`<img src="${IMG[p.id]}" alt="${p.n}">`:ph(p)}</div>
+      <div class="pd-info">
+        <span class="pd-cat">${CAT_NAME[p.c]||''}</span>
+        <h2>${p.n}</h2>
+        <div class="pr" style="font-size:26px;margin-bottom:10px">${fm(p.pr)}</div>
+        <p style="color:var(--mut);margin:0 0 12px">${D.l}</p>
+        <div style="margin-bottom:14px;font-size:14px"><b>Tình trạng:</b> ${stock}</div>
+        <div class="ac">
+          ${hasSize(p)?`<select id="s${p.id}" aria-label="Size">${[36,37,38,39,40,41,42,43,44].map(s=>`<option ${s==41?'selected':''}>Size ${s}</option>`).join('')}</select>`:''}
+          <button data-a="add" data-id="${p.id}">Thêm vào giỏ</button>
+        </div>
+      </div>
+    </div>
+
+    ${(D.h&&D.h.length)?`<div class="pd-sec"><h3>✨ Điểm nổi bật</h3><ul class="pd-list">${D.h.map(x=>`<li>${x}</li>`).join('')}</ul></div>`:''}
+    ${inc?`<div class="pd-sec"><h3>🎁 Sản phẩm trong combo</h3><ul class="pd-list">${inc}</ul></div>`:''}
+    <div class="pd-sec"><h3>📋 Thông số sản phẩm</h3>
+      <div class="pd-meta">${specs.map(([k,v])=>`<div><small>${k}</small>${v}</div>`).join('')}</div></div>
+    ${sizeGuide}
+    ${D.u?`<div class="pd-sec"><h3>🧼 Hướng dẫn sử dụng & bảo quản</h3><p style="margin:0;color:var(--mut)">${D.u}</p></div>`:''}
+    <div class="pd-sec"><h3>🚚 Giao hàng & Thanh toán</h3><ul class="pd-list plain">${POLICY.map(x=>`<li>${x}</li>`).join('')}</ul></div>
+    ${rel?`<div class="pd-sec"><h3>🛍️ Sản phẩm liên quan / mua kèm</h3><div class="rel-grid">${rel}</div></div>`:''}
+  `);
+  $('#mc').classList.add('wide');
+  $('#mc').scrollTop=0;
+}
+
+function grid(){
+  const q=$('#q').value.toLowerCase().trim();
+  let l=P.filter(F[cur]);
+  if(q)l=l.filter(p=>(p.n+' '+p.d+' '+p.sku).toLowerCase().includes(q)||SY.some(([k,t])=>q.includes(k)&&p.t.split(' ').includes(t)));
+  $('#g').innerHTML=l.map(card).join('')||'<p style="grid-column:1/-1; text-align:center; padding:40px; color:var(--mut)">Không tìm thấy sản phẩm phù hợp.</p>';
+  $('#chips').innerHTML=CH.map(([k,n])=>`<button class="${k==cur?'on':''}" data-a="f" data-k="${k}">${n}</button>`).join('');
+}
+function head(){
+  $('#cb').textContent='Giỏ ('+cart.reduce((a,x)=>a+x.q,0)+')';
+  $('#ub').textContent=user?user.n:'Đăng nhập';
+  $('#hero').innerHTML=HERO_IMG?`<img src="${HERO_IMG}" alt="Giày sneaker trắng">`:'<span>ẢNH BANNER CHÍNH</span>';
+}
+const save=()=>{LS.s('giay_cart',cart);head()};
+
+// --- BUYER FLOW: Giỏ hàng, chọn Combo, Checkout & QR Chuyển khoản ---
+function cartM(){
+  if(!cart.length)return openM('<h2>Giỏ hàng của bạn</h2><p style="color:var(--mut)">Giỏ hàng đang trống. Hãy chọn sản phẩm yêu thích nhé!</p>');
+  let subtotal=0;
+  const rows=cart.map((x,i)=>{const p=P.find(item=>item.id==x.id); subtotal+=p.pr*x.q; return `<div class="rw"><div><strong>${p.n}</strong>${x.s?' · '+x.s:''}<br><small style="color:var(--mut)">SKU: ${p.sku} | ${fm(p.pr)}</small></div><div style="display:flex; gap:6px; align-items:center"><button data-a="dec" data-i="${i}">−</button> <strong>${x.q}</strong> <button data-a="inc" data-i="${i}">+</button></div></div>`}).join('');
+  
+  // Apriori Cross-sell / Combo gợi ý
+  const shoe=cart.some(x=>{const pr=P.find(item=>item.id==x.id); return pr && hasSize(pr);});
+  const crossSellItems = [10,11,19,21].map(id => P.find(item=>item.id==id)).filter(p => p && !cart.some(x=>x.id==p.id));
+  const xs = crossSellItems.length ? crossSellItems.map(p=>`<button class="sm" data-a="add" data-id="${p.id}" data-re="1">✨ Chọn Combo/Bán kèm: ${p.n} · <b>${fm(p.pr)}</b></button>`).join(''):'';
+
+  openM(`<h2>Giỏ hàng (${cart.reduce((a,x)=>a+x.q,0)})</h2><div style="max-height:35vh; overflow-y:auto">${rows}</div>${xs?`<p style="margin:12px 0 6px; font-weight:600">Gợi ý Combo / Sản phẩm bán kèm (Apriori):</p><div class="xs">${xs}</div>`:''}<div style="display:flex; justify-content:space-between; align-items:center; margin:16px 0; font-size:18px"><span>Tạm tính:</span><strong style="color:var(--acc)">${fm(subtotal)}</strong></div><button style="width:100%; padding:12px" data-a="checkout-step">Tiến hành nhập thông tin giao hàng</button>`);
+}
+
+function checkoutFormM(){
+  if(!user)return authM('in','Vui lòng đăng nhập để tiến hành đặt hàng.');
+  let subtotal = cart.reduce((a,x)=>{const p=P.find(item=>item.id==x.id); return a+p.pr*x.q;},0);
+  
+  openM(`<h2>Thông tin giao hàng & Vận chuyển</h2>
+  <form id="cf">
+    <input name="name" placeholder="Họ và tên người nhận" value="${user.n}" required>
+    <input name="ph" type="tel" placeholder="Số điện thoại liên hệ" required>
+    <select name="city" id="city-select" required style="width:100%">
+      <option value="hcm">TP. Hồ Chí Minh (Phí ship: 25.000đ)</option>
+      <option value="other">Tỉnh thành khác (Phí ship: 40.000đ)</option>
+    </select>
+    <textarea name="ad" placeholder="Địa chỉ nhận hàng chi tiết (Số nhà, đường, phường, quận...)" rows="2" required></textarea>
+    <div style="background:var(--badge-bg); color:var(--badge-text); padding:10px; border-radius:10px; font-size:13px">
+      🚚 Hệ thống tự động tính phí vận chuyển dựa trên khu vực giao hàng.
+    </div>
+    <button style="width:100%; margin-top:10px" type="submit">Tiếp tục chọn phương thức thanh toán</button>
+  </form>`);
+}
+
+function paymentMethodM(orderData){
+  openM(`<h2>Chọn phương thức thanh toán</h2>
+  <p>Tổng thanh toán (Đã gồm phí ship): <strong style="color:var(--acc)">${fm(orderData.tot)}</strong></p>
+  <div style="display:grid; gap:12px; margin:20px 0">
+    <button style="background:var(--card); color:var(--fg); border:2px solid var(--acc); padding:16px; text-align:left; border-radius:12px" data-a="pay-cod" data-json='${JSON.stringify(orderData)}'>
+      📦 <strong>Thanh toán khi nhận hàng (COD)</strong><br><small style="color:var(--mut)">Thanh toán tiền mặt cho shipper khi nhận hàng.</small>
+    </button>
+    <button style="background:var(--card); color:var(--fg); border:2px solid var(--line); padding:16px; text-align:left; border-radius:12px" data-a="pay-qr" data-json='${JSON.stringify(orderData)}'>
+      📱 <strong>Quét mã QR Chuyển khoản Ngân hàng</strong><br><small style="color:var(--mut)">Thanh toán nhanh qua VietQR (MB, VCB, Techcombank,...)</small>
+    </button>
+  </div>`);
+}
+
+function qrPaymentM(orderData){
+  const orderId = Date.now().toString().slice(-6);
+  const fullOrder = {...orderData, id: orderId, status: 'Chờ xác nhận', payment: 'QR Chuyển khoản', d: new Date().toLocaleDateString('vi-VN')};
+  
+  // Trừ tồn kho sản phẩm
+  cart.forEach(x=>{
+    const prod = P.find(item=>item.id==x.id);
+    if(prod) prod.stock = Math.max(0, prod.stock - x.q);
+  });
+  LS.s('vibestep_products', P.map(p=>[p.id, p.sku, p.n, p.pr, p.c, p.t.split(' ')[0], p.d, p.stock]));
+
+  LS.s('giay_orders',LS.g('giay_orders',[]).concat(fullOrder));
+  cart=[]; save();
+
+  openM(`<h2>Quét mã QR Thanh toán</h2>
+  <div style="text-align:center; padding:10px">
+    <p>Vui lòng mở App Ngân hàng quét mã VietQR bên dưới:</p>
+    <div style="background:#fff; display:inline-block; padding:15px; border-radius:16px; border:1px solid var(--line)">
+      <img src="https://api.vietqr.io/image/970422-0381234567-xxxx.jpg?amount=${orderData.tot}&addInfo=VIBESTEP%20${orderId}" alt="QR Thanh toán" style="width:200px; height:200px; object-fit:contain">
+    </div>
+    <p style="margin-top:12px">Mã đơn hàng: <b>#${orderId}</b> · Số tiền: <strong style="color:var(--acc)">${fm(orderData.tot)}</strong></p>
+    <button style="width:100%; margin-top:10px" data-a="finish-order" data-id="${orderId}">Tôi đã chuyển khoản thành công</button>
+  </div>`);
+}
+
+function authM(mode,msg){
+  const up=mode=='up';
+  openM(`<h2>${up?'Đăng ký tài khoản mới':'Đăng nhập hệ thống'}</h2>${msg?`<p class="er">${msg}</p>`:''}<form id="af" data-mode="${mode}">${up?'<input name="n" placeholder="Họ và tên" required>':''}<input name="e" type="email" placeholder="Email của bạn" required><input name="p" type="password" placeholder="Mật khẩu (từ 6 ký tự)" minlength="6" required><button style="width:100%">${up?'Tạo tài khoản':'Đăng nhập'}</button></form><p style="text-align:center; margin-top:10px"><a href="#" data-a="mode" data-m="${up?'in':'up'}">${up?'Đã có tài khoản? Đăng nhập ngay':'Chưa có tài khoản? Đăng ký'}</a></p><hr style="border:0; border-top:1px solid var(--line); margin:16px 0"><small style="color:var(--mut)">`);
+}
+
+function userM(){
+  const isAdmin = user.r=='admin';
+  openM(`<h2>Tài khoản: ${user.n}</h2>
+  <p style="color:var(--mut)">${user.e} · <span style="color:var(--acc); font-weight:700">${isAdmin?'Quản trị viên / Người bán':'Khách hàng'}</span></p>
+  <div style="display:grid; gap:10px; margin:20px 0">
+    <button data-a="orders">${isAdmin?'📦 Quản lý tất cả đơn hàng (Seller)':'📦 Lịch sử đơn hàng của tôi'}</button>
+    ${isAdmin ? '<button style="background:#0f172a" data-a="seller-dashboard">📊 Quản trị Người bán (Seller Flow: Kho & Bài viết)</button>' : ''}
+    <button class="ghost" data-a="out">Đăng xuất</button>
+  </div>`);
+}
+
+// --- SELLER FLOW: Quản lý sản phẩm, SKU, Tồn kho < 2, Bán kèm & Bài viết ---
+function sellerDashboardM(){
+  if(!user || user.r!='admin') return;
+  const lowStockItems = P.filter(p=>p.stock <= 2);
+  const orders = LS.g('giay_orders',[]);
+
+  const productRows = P.map(p=>`
+    <tr style="border-bottom:1px solid var(--line)">
+      <td style="padding:8px"><b>${p.sku}</b></td>
+      <td style="padding:8px">${p.n}</td>
+      <td style="padding:8px">${fm(p.pr)}</td>
+      <td style="padding:8px; color:${p.stock<=2?'#ef4444':'inherit'}; font-weight:${p.stock<=2?'bold':'normal'}">${p.stock} ${p.stock<=2?' ⚠️':''}</td>
+      <td style="padding:8px"><button data-a="edit-stock" data-id="${p.id}" style="padding:4px 8px; font-size:11px">Sửa kho</button></td>
+    </tr>
+  `).join('');
+
+  const orderRows = orders.length ? orders.reverse().map(o=>`
+    <div style="padding:8px 0; border-bottom:1px solid var(--line); font-size:13px">
+      <b>#${o.id}</b> - ${o.name} (${o.ph}) - <strong style="color:var(--acc)">${fm(o.tot)}</strong> [${o.payment || 'COD'}]<br>
+      Trạng thái: <span style="color:var(--acc); font-weight:700">${o.status || 'Chờ xác nhận'}</span>
+      <div style="margin-top:4px">
+        <button data-a="update-status" data-id="${o.id}" data-st="Đang giao hàng" style="padding:2px 6px; font-size:11px">Giao hàng</button>
+        <button data-a="update-status" data-id="${o.id}" data-st="Đã hoàn thành" style="padding:2px 6px; font-size:11px; background:#10b981">Hoàn thành</button>
+      </div>
+    </div>
+  `).join('') : '<p>Chưa có đơn hàng nào.</p>';
+
+  const blogRows = BLOGS.map(b=>`
+    <div style="padding:8px 0; border-bottom:1px solid var(--line); font-size:13px">
+      <b>${b.title}</b> (${b.date})
+    </div>
+  `).join('');
+
+  openM(`<h2>📊 Bảng Điều Phối Người Bán (Seller Flow)</h2>
+  ${lowStockItems.length ? `<div style="background:#fee2e2; color:#b91c1c; padding:10px; border-radius:10px; margin-bottom:12px; font-size:13px">⚠️ <strong>Cảnh báo tồn kho:</strong> Có ${lowStockItems.length} sản phẩm sắp hết hàng (&lt;= 2 sản phẩm)!</div>` : ''}
+  
+  <div style="margin-bottom:20px">
+    <h3>1. Quản lý Tồn kho & SKU sản phẩm</h3>
+    <div style="max-height:200px; overflow-y:auto; border:1px solid var(--line); border-radius:10px">
+      <table style="width:100%; border-collapse:collapse; font-size:13px">
+        <thead><tr style="background:var(--card); border-bottom:1px solid var(--line)"><th style="padding:8px; text-align:left">SKU</th><th style="padding:8px; text-align:left">Tên</th><th style="padding:8px; text-align:left">Giá</th><th style="padding:8px; text-align:left">Kho</th><th style="padding:8px">Thao tác</th></tr></thead>
+        <tbody>${productRows}</tbody>
+      </table>
+    </div>
+  </div>
+
+  <div style="margin-bottom:20px">
+    <h3>2. Theo dõi & Cập nhật Trạng thái Đơn hàng</h3>
+    <div style="max-height:180px; overflow-y:auto">${orderRows}</div>
+  </div>
+
+  <div>
+    <h3>3. Quản lý Bài viết Hệ thống (Blog / Mẹo)</h3>
+    <div style="max-height:150px; overflow-y:auto">${blogRows}</div>
+    <button style="margin-top:8px; padding:6px 12px; font-size:12px" data-a="add-blog">+ Thêm bài viết mới</button>
+  </div>`);
+}
+
+function ordersM(){
+  const isAdmin = user.r=='admin';
+  const o=LS.g('giay_orders',[]).filter(x=>isAdmin||x.e==user.e).reverse();
+  openM(`<h2>${isAdmin?'Quản lý tất cả đơn hàng (Seller)':'Lịch sử đơn hàng của tôi'}</h2>`+(o.length?o.map(x=>`<div class="rw"><div><strong>Đơn #${x.id}</strong> · ${x.d} · Trạng thái: <span style="color:var(--acc)">${x.status||'Chờ xác nhận'}</span><br>${x.name} (${x.ph})<br><small style="color:var(--mut)">${x.ad}</small><br><small>📦 ${x.items}</small></div><strong style="color:var(--acc)">${fm(x.tot)}</strong></div>`).join(''):'<p style="color:var(--mut)">Chưa có đơn hàng nào.</p>'));
+}
+
+function guideM(){
+  openM(`<h2>Hướng dẫn Đồ án & Tính năng</h2><ol style="padding-left:20px; line-height:1.7"><li><strong>Buyer Flow:</strong> Khách chọn sản phẩm/combo, điền thông tin giao hàng, hệ thống tự động tính phí ship theo khu vực, hỗ trợ thanh toán QR chuyển khoản hoặc COD.</li><li><strong>Seller Flow:</strong> Đăng nhập admin (<b>admin@giay.vn</b> / <b>admin123</b>) để quản lý SKU, cảnh báo tồn kho dưới 2 sản phẩm, cấu hình sản phẩm bán kèm, cập nhật trạng thái đơn hàng và quản lý bài viết hệ thống.</li><li><strong>Thuật toán Apriori:</strong> Tự động gợi ý sản phẩm bán kèm trong giỏ hàng.</li></ol>`);
+}
+
+document.addEventListener('click',e=>{
+  const b=e.target.closest('[data-a]');
+  if(e.target.id=='m')return closeM();
+  if(!b)return;
+  const a=b.dataset.a,d=b.dataset;
+  if(a=='mode'){e.preventDefault();authM(d.m)}
+  else if(a=='detail'){
+    e.preventDefault();
+    if(e.target.closest('select,button,input'))return;
+    productM(d.id);
+  }
+  else if(a=='close')closeM();
+  else if(a=='f'){cur=d.k;$('#q').value='';grid();$('#g').scrollIntoView()}
+  else if(a=='add'){
+
+    const p=P.find(item=>item.id==d.id),s=hasSize(p)?($('#mc #s'+p.id)||$('#s'+p.id)).value:'';
+    if(p.stock <= 0) return toast('Sản phẩm này tạm hết hàng!');
+    const k=cart.find(x=>x.id==p.id&&x.s==s);
+    k?k.q++:cart.push({id:p.id,s,q:1});
+    save();toast('Đã thêm sản phẩm vào giỏ hàng!');
+    if(d.re)cartM();
+  }
+  else if(a=='cart')cartM();
+  else if(a=='inc'){cart[d.i].q++;save();cartM()}
+  else if(a=='dec'){if(--cart[d.i].q<1)cart.splice(d.i,1);save();cartM()}
+  else if(a=='checkout-step')checkoutFormM()
+  else if(a=='pay-cod'){
+    const data=JSON.parse(d.json);
+    const orderId = Date.now().toString().slice(-6);
+    const fullOrder = {...data, id: orderId, status: 'Chờ xác nhận', payment: 'COD', d: new Date().toLocaleDateString('vi-VN')};
+    
+    // Trừ tồn kho
+    cart.forEach(x=>{
+      const prod = P.find(item=>item.id==x.id);
+      if(prod) prod.stock = Math.max(0, prod.stock - x.q);
+    });
+    LS.s('vibestep_products', P.map(p=>[p.id, p.sku, p.n, p.pr, p.c, p.t.split(' ')[0], p.d, p.stock]));
+
+    LS.s('giay_orders',LS.g('giay_orders',[]).concat(fullOrder));
+    cart=[];save();
+    openM(`<h2>Đặt hàng thành công 🎉</h2><p>Mã đơn hàng: <b>#${orderId}</b></p><p style="color:var(--mut)">Cảm ơn bạn đã ủng hộ VibeStep! Đơn hàng COD sẽ được giao đến bạn sớm nhất.</p>`);
+  }
+  else if(a=='pay-qr'){
+    const data=JSON.parse(d.json);
+    qrPaymentM(data);
+  }
+  else if(a=='finish-order'){
+    openM(`<h2>Thanh toán hoàn tất 🎉</h2><p>Mã đơn hàng: <b>#${d.id}</b> đã được ghi nhận thanh toán qua QR ngân hàng.</p>`);
+  }
+  else if(a=='user')user?userM():authM('in');
+  else if(a=='out'){user=null;LS.s('giay_sess',null);head();closeM()}
+  else if(a=='orders')ordersM();
+  else if(a=='seller-dashboard')sellerDashboardM();
+  else if(a=='guide')guideM();
+  else if(a=='pop'){cur='all';$('#q').value=d.q;grid();$('#g').scrollIntoView()}
+  else if(a=='edit-stock'){
+    const prod = P.find(item=>item.id==d.id);
+    const newStock = prompt(`Nhập số lượng tồn kho mới cho [${prod.sku}] ${prod.n}:`, prod.stock);
+    if(newStock !== null && !isNaN(newStock)){
+      prod.stock = parseInt(newStock);
+      LS.s('vibestep_products', P.map(p=>[p.id, p.sku, p.n, p.pr, p.c, p.t.split(' ')[0], p.d, p.stock]));
+      toast('Đã cập nhật tồn kho!');
+      sellerDashboardM();
+      grid();
+    }
+  }
+  else if(a=='update-status'){
+    let orders = LS.g('giay_orders',[]);
+    const ord = orders.find(o=>o.id==d.id);
+    if(ord){
+      ord.status = d.st;
+      LS.s('giay_orders', orders);
+      toast('Đã cập nhật trạng thái đơn hàng!');
+      sellerDashboardM();
+    }
+  }
+  else if(a=='add-blog'){
+    const title = prompt('Nhập tiêu đề bài viết mới:');
+    if(title){
+      BLOGS.push({id: Date.now(), title, date: new Date().toLocaleDateString('vi-VN'), content: 'Nội dung bài viết quản trị viên.'});
+      LS.s('vibestep_blogs', BLOGS);
+      toast('Đã thêm bài viết!');
+      sellerDashboardM();
+    }
+  }
+});
+
+document.addEventListener('submit',e=>{
+  e.preventDefault();
+  const f=e.target,v=Object.fromEntries(new FormData(f));
+  if(f.id=='af'){
+    const em=v.e.toLowerCase();
+    if(f.dataset.mode=='up'){
+      if(USERS().some(u=>u.e==em))return authM('up','Email này đã được đăng ký.');
+      const u={e:em,p:v.p,n:v.n,r:'user'};LS.s('giay_users',LS.g('giay_users',[]).concat(u));user=u;
+   
+}
+    else{
+      const u=USERS().find(u=>u.e==em&&u.p==v.p);
+      if(!u)return authM('in','Sai email hoặc mật khẩu.');user=u;
+    }
+    LS.s('giay_sess',user);head();toast('Xin chào, '+user.n+'!');closeM();
+  }else if(f.id=='cf'){
+    let subtotal = cart.reduce((a,x)=>{const p=P.find(item=>item.id==x.id); return a+p.pr*x.q;},0);
+    let shipFee = v.city == 'hcm' ? 25000 : 40000;
+    let tot = subtotal + shipFee;
+    let itemsStr = cart.map(x=>{const p=P.find(item=>item.id==x.id); return p.n+(x.s?' ('+x.s+')':'')+' ×'+x.q;}).join('; ');
+    
+    const orderData = {
+      e: user.e,
+      name: v.name,
+      ph: v.ph,
+      ad: v.ad + ` (${v.city == 'hcm' ? 'TP.HCM' : 'Tỉnh khác'})`,
+      items: itemsStr,
+      subtotal: subtotal,
+      shipFee: shipFee,
+      tot: tot
+    };
+    paymentMethodM(orderData);
+  }
+});
+
+$('#q').addEventListener('input',()=>{cur='all';grid()});
+$('#kw').innerHTML=POP.map(k=>`<option value="${k}">`).join('');
+$('#pop').innerHTML=POP.pop ? POP.map(k=>`<button data-a="pop" data-q="${k}">${k}</button>`).join('') : '';
+head();grid();
+
+</script>
+</body>
+</html>
